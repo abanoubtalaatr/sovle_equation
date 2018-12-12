@@ -1,0 +1,283 @@
+body{
+	background-image: url("http://localhost/artificial_intelligence/5.gif");
+	background-size: 1400px 665px;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	perspective: 10000000px;
+
+}
+.navbar{
+	background:#182C61;
+	height: 50px;
+	color: white;
+	text-transform: capitalize;
+
+}
+.navbar .our_team{
+	display: inline-block;;
+	position: relative;
+	float: right;
+	margin-right: 100px;
+	cursor: pointer;
+	
+}
+.navbar .our_team:after{
+	content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 14%;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.navbar .our_team .contain_names_of_team{
+	display: inline-block;;
+	color: black;
+	margin-top: -10px;
+	position: absolute;
+	z-index: 400;
+	left: -35px;
+	width: max-content;
+	display: none;
+}
+.navbar .our_team .contain_names_of_team ul{
+	list-style: none;
+	margin: 0px;
+	background:#b3b7b3;
+	padding: 0px;
+	box-shadow: 1px 4px 20px 2px;
+}
+.navbar .our_team .contain_names_of_team ul li{
+	padding: 10px 0px;
+}
+.navbar .our_team .contain_names_of_team ul li:not(:last-of-type){
+	border-bottom: 1px solid #928c8c;
+}
+.navbar .our_team .contain_names_of_team ul li:hover{
+	background:black;
+	cursor: pointer;
+	
+}
+.navbar .our_team .contain_names_of_team ul li:hover a{
+	color: yellow;
+}
+.navbar .our_team .contain_names_of_team ul li a {
+	text-decoration: none;
+	padding: 10px;
+	letter-spacing: 1px;
+    color: black
+}
+.navbar .our_team:hover .contain_names_of_team{
+   display: block;
+
+}
+
+
+.input{
+	width: 80%;
+	float: left;
+	direction: ltr;
+	overflow: hidden;
+	margin-left: 10%;
+	margin-top:20px;
+}
+.input form label{
+	padding: 10px;
+    font-weight: boder;
+    font-size: 22px;
+    background: #0404043d;
+    border-radius: 8px;
+    margin-right: 28px;
+}
+.input form input{
+	direction: ltr;
+	outline: none;
+	font-size: 20px;
+	border-radius: 5px;
+    border: none;
+    background: cadetblue;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin-right: 22px;
+    width: 32%;
+}
+.input form input[placeholder]{
+	
+}
+.input form input::placeholder{
+	color:white;
+	letter-spacing: 0px;
+}
+.input button {
+	border: none;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 4px;
+    width: max-content;
+    cursor: pointer;
+    float: left;
+    margin-top: 23px;
+    margin-right: 0px;
+    padding: 7px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.input button:focus{
+	outline: none;
+}
+.input button:hover{
+	background:#3498db;
+}
+.input .result{
+    margin-top: 2px;
+    background: #f5f7f5;
+    width: 360px;
+    height: 520px;
+    float: right;
+    margin-right: 26.5%;
+    background:black;
+    color:yellow;
+    border-radius: 4px;
+    padding-left: 10px;
+
+
+}
+/*style belong respone that came from php file*/
+.response_h6{
+	margin: 0px;
+    padding-top: 18px;
+    font-size: 16px;
+    margin-right: 12px;
+    font-weight: 100;
+}
+.response_result{
+    font-size: 25px;
+    margin-top: 25px;
+    padding-top: 0px;
+
+}
+.door_left{
+	
+	position: absolute;
+	z-index: 3;
+	width: 49.9%;
+	background:#303952;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	height: 667px;
+	border-right: 3px solid ;
+	float: left;
+	transform:  perspective(1000px) rotateY(0deg);
+	transform-origin: left;
+	
+}
+.door_right{
+	
+   	position: absolute;
+	z-index: 3;
+	width: 49.6%;
+	background:#303952;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 667px;
+	float: right;
+	border-left: 2px solid ;
+	transform-origin: right;
+	transform:  perspective(1000px) rotateY(0deg);
+	
+}
+.to_open_right_door{
+	transform:perspective(1000px) rotateY(-90deg);
+	transition: all 5s ease-in-out;
+}
+.to_open_left_door{
+	transform:perspective(1000px) rotateY(90deg);
+	transition: all 5s ease-in-out;
+}
+.door_right .open_door{
+	position: absolute;
+    z-index: 4;
+    top: calc((667px - 50px)/2);
+    height: 50px;
+    width: 50px;
+    left: .5%;
+    cursor: grab;
+}
+.hidden{
+	width: 0px;
+	height: 0px;
+	transition: all 3s ease-in-out;
+}
+.rotate_class{
+	 left: 48%;
+     transform: rotateZ(38deg);
+     transition: all 2s ease;
+}
+
+.door_right .open_door .first_circuite{
+	position: absolute;
+	z-index: 5;
+	background: #5a4444;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.door_right .open_door .second_circuite{
+	position: absolute;
+	z-index: 6;
+	background:#652b42;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	left: 5px;
+	top: 5px;
+}
+.door_right .open_door .third_circuite{
+	position: absolute;
+	z-index: 7;
+	background:#6f2e73;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	left: 10px;
+	top: 10px;
+}
+.door_right .open_door .fourth_circuite{
+	position: absolute;
+    z-index: 8;
+    background: #2f3135a8;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    left: 13px;
+    top: 13px;
+}
+.door_right .open_door .fivth_circuite{
+	width: 5px;
+    height: 43px;
+    border-radius: 86px 107px;
+    background: #6d4d4d;
+    position: absolute;
+    z-index: 9;
+    left: 32px;
+    top: 12px;
+    transform: rotateZ(132deg);
+}
+.door_right .open_door .six_circuite{
+    width: 5px;
+    height: 24px;
+    border-radius: 47px 86px;
+    background: #6d4d4d;
+    position: absolute;
+    z-index: 10;
+    left: 53px;
+    top: 26px;
+    transform: rotateZ(38deg);
+}
